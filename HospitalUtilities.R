@@ -6,7 +6,8 @@
 
 ## ----------------------------------------------------------------------------
 ## This file contains various utilities for the assigment
-## -- Load data
+## -- Load data (filename)
+## -- get.data (x, index)
 ## ----------------------------------------------------------------------------
 
 
@@ -30,13 +31,10 @@ col.names <- c("Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack",
                "Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure", 
                "Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia")
 
-columns <- data.frame(cbind(col.index, col.names))
-
 # column index
 dataset.heart.attack <- 11
 dataset.heart.failures <- 17
 dataset.peneumonia <- 23
-
 
 
 ## hospital.load
@@ -66,11 +64,5 @@ get.data <- function (x, index){
   values.cleaned <- complete.cases(values.selected)
   return (values.selected[values.cleaned,])  
 }
-
-
-
-values <- hospital.load(directory.care.measures)
-values.returned <- get.data(values, dataset.heart.attack)
-print(values.returned)
 
 
