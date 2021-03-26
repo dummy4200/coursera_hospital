@@ -23,7 +23,7 @@ directory.care.hospital <- "hospital-data.csv"
 ## ----------------------------------------------------------------------------
 
 # working directory
-setwd("D:/R repositories/Coursera/Programming assignments/Hospital data")
+# setwd("D:/R repositories/Coursera/Programming assignments/Hospital data")
 
 # column selections
 col.index <- c(11,17,23)
